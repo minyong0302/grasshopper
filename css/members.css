@@ -1,0 +1,39 @@
+/* 상단 고정 내용 */
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  margin: 0;
+  padding: 1px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+header h3 {
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  padding: 1px;
+  text-align: center;
+  text-justify: center;
+  background-color: rgb(196, 196, 196);
+  position: sticky;
+  top: 0;
+}
+
+.navbar a {
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+.navbar a:hover {
+  color: black;
+}
+
+/* 상단 고정 내용 */

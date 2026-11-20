@@ -1,0 +1,76 @@
+/* 상단 고정 내용 */
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  margin: 0;
+  padding: 1px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+header h3 {
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  padding: 1px;
+  text-align: center;
+  text-justify: center;
+  background-color: rgb(196, 196, 196);
+  position: sticky;
+  top: 0;
+}
+
+.navbar a {
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+.navbar a:hover {
+  color: black;
+}
+
+/* 상단 고정 내용 */
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.content {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #ddd;
+}
+
+@media screen and (max-width: 768px) {
+  .row,
+  .navbar {
+    flex-direction: column;
+  }
+}
