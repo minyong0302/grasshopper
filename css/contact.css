@@ -1,0 +1,231 @@
+/* 상단 고정 내용 */
+
+* {
+  box-sizing: border-box;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  height: 64px; /* 1. navbar 전체 높이를 고정 */
+  padding: 0 40px; /* 2. 위아래 padding을 0으로 줄여 로고 공간 확보 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px; /* 로고와 첫 번째 메뉴 사이 간격 확보 */
+}
+
+.site-header .logo {
+  margin: 0;
+  line-height: 1;
+}
+
+.site-header .logo a {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* 로고가 커지면서 글자와 너무 가까워지면 이 값을 늘리세요 */
+  text-decoration: none;
+  color: #111827;
+}
+
+.site-header .logo img {
+  height: 48px; /* 3. 헤더 높이(64px) 안에서 최대한 키움 */
+  width: auto;
+  display: block;
+  transform: scale(1.3);
+}
+
+.navbar {
+  display: flex;
+  gap: 24px; /* 메뉴 항목 사이 간격 */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #0b5394;
+}
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+/* 전체 본문 컨테이너 (양쪽 여백 확보) */
+.info-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+/* 1. 상단 아이콘 + 제목 */
+.info-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.title-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b5394;
+}
+
+.page-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+/* 2. 상단 둥근 배너 이미지 */
+.banner-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #e5e7eb;
+  border: 1px solid #e5e7eb;
+}
+
+.banner-img {
+  width: 100%;
+  /* height: 100%; */
+  aspect-ratio: 9/10;
+  object-fit: cover;
+
+  
+}
+
+.banner-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #f3f4f6;
+}
+
+/* 이미지 하단 어두운 그라데이션 + 흰색 캡션 */
+.banner-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 28px 20px 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+
+/* 구분선 */
+.info-divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 32px 0;
+}
+
+/* 3. 세부 정보 리스트 */
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.info-label {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.info-text {
+  font-size: 0.96rem;
+  color: #4b5563;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.info-subtext {
+  font-size: 0.88rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 4px 0 0 0;
+}
+
+.info-link {
+  color: #0b5394;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.info-link:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* 4. 하단 지도 영역 */
+.map-section {
+  margin-top: 32px;
+}
+
+.map-box {
+  width: 100%;
+  height: 380px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  background-color: #f3f4f6;
+}
+
+.map-box iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 640px) {
+  .info-container {
+    padding: 32px 16px 60px;
+  }
+
+  .page-title {
+    font-size: 1.4rem;
+  }
+
+  .banner-caption {
+    font-size: 0.82rem;
+    padding: 20px 14px 12px;
+  }
+
+  .map-box {
+    height: 280px;
+  }
+}
