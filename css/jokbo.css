@@ -1,0 +1,69 @@
+body {
+  background: #f5f7fb;
+  color: #172033;
+  font-family: system-ui, sans-serif;
+}
+
+.jokbo-card {
+  width: min(100% - 32px, 460px);
+  margin: clamp(24px, 8vw, 80px) auto;
+  padding: clamp(20px, 5vw, 36px);
+  background: #fff;
+  border: 1px solid #dfe5ef;
+  border-radius: 16px;
+}
+
+.jokbo-card h1 {
+  margin: 0;
+}
+
+.jokbo-card p {
+  color: #526178;
+  line-height: 1.55;
+}
+
+.jokbo-card form:not([hidden]) {
+  display: grid;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.jokbo-card label {
+  font-weight: 700;
+}
+
+.jokbo-card input,
+.jokbo-card button {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.jokbo-card input {
+  border: 1px solid #a4b0c3;
+}
+
+.jokbo-card button {
+  border: 0;
+  background: #0b5394;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.jokbo-card button:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+#jokbo-status:empty {
+  margin: 0;
+}
+
+#change-email {
+  margin-top: 8px;
+  background: #edf4fc;
+  color: #0b5394;
+}

@@ -1,10 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>활동 기록 | 아치셈틀</title>
+    <link rel="stylesheet" href="../css/site-header.css" />
     <link rel="stylesheet" href="../css/activity.css" />
+    <script src="../js/activity.js" defer></script>
   </head>
   <body>
     <!-- 상단 고정 navbar -->
@@ -14,18 +16,102 @@
           ><img src="../img/셈틀로고.png" alt="동아리로고"
         /></a>
       </h3>
-      <nav class="navbar">
+      <nav class="navbar" aria-label="주 메뉴">
         <a href="../index.html">홈</a>
         <a href="./members.html">집부 소개</a>
         <a href="./project.html">프로젝트</a>
         <a href="./schedule.html">동아리 일정</a>
-        <a href="./activity.html">활동 기록</a>
+        <a href="./activity.html" aria-current="page">활동 기록</a>
         <a href="./contact.html">안내</a>
         <a href="">모니터링</a>
+        <a href="./jokbo.html">족보</a>
       </nav>
     </header>
 
-    <h4>활동 기록</h4>
+    <main class="activity-feed">
+      <h1>활동 기록</h1>
+
+      <div class="year-filter" hidden>
+        <label for="activity-year">연도</label>
+        <select id="activity-year"></select>
+      </div>
+      <p class="activity-empty" hidden>등록된 활동 기록이 없어요.</p>
+
+      <!-- 새 기록은 article을 복사해 최신순으로 추가하세요. 제목 id와 aria-labelledby에는 같은 고유 값을 넣으세요. -->
+
+      <article class="activity-post" aria-labelledby="review-title">
+        <header class="post-header">
+          <img class="post-avatar" src="../img/셈틀로고.png" alt="" />
+          <strong>아치셈틀</strong>
+          <small>예시 게시물</small>
+        </header>
+        <!-- 사진을 게시할 때 아래 div를 <img class="activity-photo" src="../img/파일명.jpg" alt="사진 설명" loading="lazy" />로 교체하세요. -->
+        <div class="photo-placeholder">사진</div>
+        <div class="post-caption">
+          <h2 id="review-title">2학기 종강총회</h2>
+          <p>상세 설명</p>
+          <time datetime="2026-11-26">2026년 11월 26일</time>
+        </div>
+      </article>
+
+      <article class="activity-post" aria-labelledby="study-title">
+        <header class="post-header">
+          <img class="post-avatar" src="../img/셈틀로고.png" alt="" />
+          <strong>아치셈틀</strong>
+          <small>예시 게시물</small>
+        </header>
+        <div class="photo-placeholder">사진</div>
+        <div class="post-caption">
+          <h2 id="study-title">베짱이 프로젝트</h2>
+          <p>상세 설명</p>
+          <time datetime="2026-10-13">2026년 10월 13일</time>
+        </div>
+      </article>
+
+      <article class="activity-post" aria-labelledby="study-title">
+        <header class="post-header">
+          <img class="post-avatar" src="../img/셈틀로고.png" alt="" />
+          <strong>아치셈틀</strong>
+          <small>예시 게시물</small>
+        </header>
+        <div class="photo-placeholder">사진</div>
+        <div class="post-caption">
+          <h2 id="study-title">2학기 개강총회</h2>
+          <p>상세 설명</p>
+          <time datetime="2026-09-08">2026년 9월 8일</time>
+        </div>
+      </article>
+
+       <article class="activity-post" aria-labelledby="study-title">
+        <header class="post-header">
+          <img class="post-avatar" src="../img/셈틀로고.png" alt="" />
+          <strong>아치셈틀</strong>
+          <small>예시 게시물</small>
+        </header>
+        <div class="photo-placeholder">사진</div>
+        <div class="post-caption">
+          <h2 id="study-title">MT</h2>
+          <p>상세 설명</p>
+          <time datetime="2026-05-09">2026년 5월 9일</time>
+        </div>
+      </article>
+
+      <article class="activity-post" aria-labelledby="project-title">
+        <header class="post-header">
+          <img class="post-avatar" src="../img/셈틀로고.png" alt="" />
+          <strong>아치셈틀</strong>
+          <small>예시 게시물</small>
+        </header>
+        <div class="photo-placeholder">사진</div>
+        <div class="post-caption">
+          <h2 id="project-title">내용</h2>
+          <p>
+            상세
+          </p>
+          <time datetime="2025-11-13">2025년 11월 13일</time>
+        </div>
+      </article>
+    </main>
 
     <!-- 하단 -->
     <footer class="site-footer">
